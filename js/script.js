@@ -49,28 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // 4. FETCH DATA (Karya Dinamis)
-  const dynamicContainer = document.getElementById("dynamic-portfolio");
-  if (dynamicContainer) {
-    fetch("php/data.php")
-      .then((res) => res.json())
-      .then((data) => {
-        let htmlContent = "";
-        data.forEach((item) => {
-          htmlContent += `
-              <div class="dynamic-card">
-                <img src="${item.image}" alt="${item.title}">
-                <h4>${item.title}</h4>
-                <p class="text-muted">${item.description}</p>
-              </div>
-            `;
-        });
-        dynamicContainer.innerHTML = htmlContent;
-      })
-      .catch((err) => console.log(err));
-  }
-
-  // 5. AJAX FORM SUBMIT (Kontak)
+  // 4. AJAX FORM SUBMIT (Kontak)
   const contactForm = document.getElementById("contact-form");
   const formResponse = document.getElementById("form-response");
   if (contactForm) {
@@ -92,6 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((result) => {
           formResponse.innerHTML = `<p style="color:#2e7d32; margin-top:1rem;">${result.message}</p>`;
           contactForm.reset();
+        })
+        .catch((err) => {
+          formResponse.innerHTML = `<p style="color:red; margin-top:1rem;">Gagal mengirim pesan.</p>`;
         });
     });
   }

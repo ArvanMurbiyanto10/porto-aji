@@ -1,5 +1,5 @@
 /* =========================================
-   IMMERSIVE & INTERACTIVE THEME
+   IMMERSIVE & INTERACTIVE THEME (AWWWARDS STYLE)
    ========================================= */
 
 :root {
@@ -11,6 +11,7 @@
   --accent-hover: #9c451e;
   --border-color: rgba(17, 17, 17, 0.1);
   --surface-color: #ffffff;
+  --cursor-color: #c05a2b;
 
   --font-serif: "Playfair Display", serif;
   --font-sans: "Outfit", sans-serif;
@@ -24,6 +25,7 @@
   --accent-color: #e07a4b;
   --border-color: rgba(244, 240, 234, 0.1);
   --surface-color: #1a1a1a;
+  --cursor-color: #f4f0ea;
 }
 
 * {
@@ -82,11 +84,6 @@ h3 {
   line-height: 1;
   margin-bottom: 2rem;
 }
-.huge-text {
-  font-size: 6rem;
-  line-height: 0.9;
-  font-family: var(--font-serif);
-}
 
 /* --- BUTTONS --- */
 .btn-primary {
@@ -99,7 +96,6 @@ h3 {
   letter-spacing: 1px;
   border: 1px solid var(--text-main);
   transition: all 0.3s;
-  cursor: pointer;
 }
 .btn-primary:hover {
   background-color: var(--accent-color);
@@ -111,7 +107,6 @@ h3 {
   border: 1px solid var(--border-color);
   border-radius: 50px;
   transition: 0.3s;
-  cursor: pointer;
 }
 .btn-outline:hover {
   background: var(--text-main);
@@ -235,9 +230,6 @@ h3 {
   gap: 8rem;
   align-items: center;
 }
-.about-visual {
-  position: relative;
-}
 .portrait {
   border-radius: 500px 500px 0 0;
   height: 600px;
@@ -327,34 +319,31 @@ h3 {
   display: flex;
   gap: 1rem;
   margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-/* DYNAMIC DATA */
-.dynamic-grid {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
+.store-btn:hover {
+  background: var(--text-main);
+  color: var(--bg-color);
+  border-color: var(--text-main);
+  transform: translateY(-3px);
 }
-.dynamic-card {
-  padding: 2rem;
-  border-bottom: 1px solid var(--border-color);
-  transition: 0.3s;
-}
-.dynamic-card:hover {
-  background: var(--surface-color);
-  transform: translateY(-10px);
-}
-.dynamic-card img {
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-.dynamic-card h4 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+
+.store-icon {
+  width: 18px;
+  height: 18px;
 }
 
 /* STRIP GALLERY */
@@ -421,31 +410,19 @@ h3 {
   font-size: 1.2rem;
 }
 
-/* --- FOOTER & ICONS --- */
+/* --- FOOTER --- */
 footer {
   padding: 3rem 0;
   border-top: 1px solid var(--border-color);
-  text-align: center;
 }
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.social-icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease;
-  color: var(--text-main);
-}
-.socials a:hover .social-icon {
-  color: var(--accent-color);
-  transform: translateY(-3px);
+.socials a {
+  margin-left: 2rem;
+  font-weight: 500;
 }
 
 /* --- ANIMATIONS (Reveal) --- */
@@ -480,9 +457,6 @@ footer {
   }
   .nav-links {
     display: none;
-  }
-  .huge-text {
-    font-size: 4rem;
   }
   .floating-box {
     left: 10px;
