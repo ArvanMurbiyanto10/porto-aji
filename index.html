@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Aji</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Hubungkan CSS di sini -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Area Header dan Navigasi -->
+    <header>
+        <div class="container">
+            <h1>Aji.</h1>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Area Hero / Home -->
+    <section id="home" class="hero">
+        <div class="container">
+            <img src="img/foto-aji1.jpeg" alt="Foto Profil Aji" class="profile-img" width="200" style="border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+            <h2>Halo, Saya Aji</h2>
+            <p>Seorang Web Developer yang antusias dalam membangun antarmuka interaktif.</p>
+            <a href="#contact" class="btn">Hubungi Saya</a>
+        </div>
+    </section>
+
+    <!-- Area About -->
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya sering membuat proyek web interaktif menggunakan HTML, CSS, JavaScript, dan PHP. Mengedepankan desain modern dan UX yang baik.</p>
+        </div>
+    </section>
+
+    <!-- Area Portfolio (Akan diisi via AJAX) -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Karya Saya</h2>
+            <p>Berikut adalah beberapa karya terbaru saya. Data ini dimuat secara dinamis menggunakan AJAX dan PHP.</p>
+            
+            <div id="portfolio-container" class="grid-container">
+                <!-- Elemen portofolio akan ditempelkan oleh JavaScript di sini -->
+                <p class="loading">Memuat portofolio...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Kontak -->
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Saya</h2>
+            <!-- Form ini akan dikirim tanpa reload menggunakan AJAX -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+            <div id="form-response"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portofolio Aji. Dibuat untuk tugas akhir.</p>
+        </div>
+    </footer>
+
+    <!-- Hubungkan JavaScript di sini -->
+    <script src="js/script.js"></script>
+</body>
+</html>
