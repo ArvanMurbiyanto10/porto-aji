@@ -3,134 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Aji - Penulis</title>
+    <title>Aji — Penulis & Pemikir</title>
+    
+    <!-- Fonts: Playfair Display (Serif) & Outfit (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>Aji.</h1>
-        <nav id="navbar">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    
+    <!-- Navigation: Minimalist & Centered -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="#" class="logo">AJI.</a>
+        <ul class="nav-links">
+          <li><a href="#journal">Jurnal</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#book">Karya</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section: Editorial Style -->
+    <header class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">Penulis & Pengamat Ruang</span>
+          <h1>Merangkai Kata,<br><i>Memaknai</i> Ruang.</h1>
+          <p class="lead">
+            Sebuah eksplorasi tentang bagaimana ruang fisik membentuk ruang batin kita. 
+            Menemukan diri sendiri di antara dinding-dinding yang kita bangun.
+          </p>
+          <a href="#book" class="btn-primary">Lihat Karya Terbaru</a>
+        </div>
+        <div class="hero-visual">
+          <div class="image-reveal">
+            <img src="img/foto-aji1.jpeg" alt="Potret Aji" />
+          </div>
+        </div>
       </div>
     </header>
 
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h2>Halo, Saya Aji</h2>
-          <p>
-            Seorang penulis yang menuangkan gagasan tentang makna ruang pribadi,
-            psikologi, dan perjalanan menemukan diri sendiri melalui kata-kata.
-          </p>
-          <a href="#contact" class="btn">Hubungi Saya</a>
-        </div>
-        <div class="hero-image">
-          <img
-            src="img/foto-aji1.jpeg"
-            alt="Foto Profil Aji"
-            class="profile-img"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
+    <!-- About Section: Text Heavy & Narrative -->
+    <section id="about" class="about-section">
       <div class="container">
-        <h2>Tentang Saya</h2>
-        <div class="about-content">
-          <div class="about-image">
-            <div class="img-wrapper">
-              <img src="img/foto-aji2.jpeg" alt="Potret Aji" />
-            </div>
+        <div class="about-grid">
+          <div class="about-visual">
+             <img src="img/foto-aji2.jpeg" alt="Aji Writing" />
+             <div class="quote-box">
+               "Menulis adalah cara saya merawat ingatan yang hampir pudar."
+             </div>
           </div>
-          <div class="about-text">
-            <h3>
-              Menulis adalah merawat ingatan dan menjelajahi ruang pikiran.
-            </h3>
+          <div class="about-narrative">
+            <h2 class="section-title">Di Balik Pena</h2>
             <p>
-              Saya adalah seorang penulis muda yang berfokus pada isu-isu
-              pengembangan diri dan psikologi sehari-hari.
+              Halo, saya Aji. Saya percaya bahwa setiap sudut rumah memiliki cerita, 
+              dan setiap cerita membutuhkan 'rumah' untuk bernaung.
             </p>
             <p>
-              Melalui karya-karya saya, saya berusaha mengeksplorasi hubungan
-              mendalam antara ruang pribadi—baik secara fisik maupun
-              emosional—dan dampaknya terhadap kesehatan mental kita di dunia
-              yang serba cepat ini. Saya percaya bahwa setiap kata memiliki
-              kekuatan untuk menyembuhkan dan memberikan perspektif baru.
+              Fokus tulisan saya berkisar pada <strong>psikologi ruang (environmental psychology)</strong> 
+              dan <strong>pengembangan diri</strong>. Di dunia yang semakin bising, 
+              saya mengajak pembaca untuk kembali menengok ke dalam—baik ke dalam rumah mereka, 
+              maupun ke dalam diri mereka sendiri.
             </p>
+            <div class="signature">Aji T.P.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
+    <!-- Featured Book Section: The Masterpiece -->
+    <section id="book" class="featured-book-section">
       <div class="container">
-        <h2>Karya Saya</h2>
-        <p
-          style="
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-          "
-        >
-          Berikut adalah hasil karya tulisan terbaru saya.
-        </p>
+        <div class="section-header center">
+          <span class="tag-pill">Buku Terbaru</span>
+          <h2 class="section-title">My Home: My Self</h2>
+        </div>
 
-        <div id="portfolio-container" class="grid-container">
-          <!-- Data Portofolio Statis -->
-          <div class="portfolio-item">
-            <img src="img/foto-aji2.jpeg" alt="MY HOME: MY SELF" />
-            <div class="portfolio-info">
-              <h3>MY HOME: MY SELF</h3>
-              <p>
-                Buku yang mengeksplorasi secara mendalam hubungan antara ruang
-                pribadi dan dampaknya terhadap kesehatan mental kita
-                sehari-hari.
-              </p>
+        <div class="book-showcase-editorial">
+          <!-- Kolom Kiri: Cover Art -->
+          <div class="showcase-visual">
+            <div class="book-cover-wrapper">
+              <img src="img/sampul-buku.jpg" alt="Cover My Home My Self" class="main-cover" />
+            </div>
+            <div class="availability">
+              <span>Tersedia di:</span>
+              <div class="shop-badges">
+                <a href="#" class="shop-link">Shopee</a>
+                <a href="#" class="shop-link">Tokopedia</a>
+              </div>
             </div>
           </div>
+
+          <!-- Kolom Kanan: Story & Context -->
+          <div class="showcase-content">
+            <h3>Sebuah Perjalanan Menemukan Diri<br>di Ruang Pribadi.</h3>
+            <p class="synopsis">
+              Pernahkah Anda merasa asing di rumah sendiri? Atau justru merasa dinding kamar Anda 
+              begitu mengerti kesedihan Anda? Buku ini bukan sekadar tentang desain interior, 
+              tapi tentang <em>interior hati</em>.
+            </p>
+            <p class="synopsis">
+              Dalam 160 halaman, kita akan membedah bagaimana menata barang sama dengan menata pikiran, 
+              dan bagaimana membereskan ruang adalah langkah awal membereskan hidup.
+            </p>
+            
+            <ul class="book-specs">
+              <li>
+                <span class="label">Penerbit</span>
+                <span class="val">C-Klik Media</span>
+              </li>
+              <li>
+                <span class="label">Rilis</span>
+                <span class="val">Februari 2024</span>
+              </li>
+              <li>
+                <span class="label">Genre</span>
+                <span class="val">Self-Development</span>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <!-- Horizontal Gallery Strip -->
+        <div class="visual-strip">
+          <div class="strip-item">
+            <img src="img/buku-satu.jpg" alt="Preview Halaman 1" />
+            <span class="caption">Bab 1: Pondasi Diri</span>
+          </div>
+          <div class="strip-item">
+            <img src="img/buku-dua.jpg" alt="Preview Halaman 2" />
+            <span class="caption">Bab 3: Jendela Jiwa</span>
+          </div>
+          <div class="strip-item">
+            <img src="img/buku-tiga.jpg" alt="Preview Halaman 3" />
+            <span class="caption">Epilog: Pulang</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <h2>Hubungi Saya</h2>
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required />
+    <!-- Contact Section: Minimalist -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-wrapper">
+        <div class="contact-text">
+          <h2>Mari Berdiskusi</h2>
+          <p>Tertarik untuk kolaborasi bedah buku, penulisan artikel, atau sekadar menyapa?</p>
+          <p class="email-display">hello@aji-writer.com</p>
+        </div>
+        
+        <form id="contact-form" class="minimal-form">
+          <div class="input-group">
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required />
           </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder="Alamat Email" required />
           </div>
-          <div class="form-group">
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="input-group">
+            <textarea id="message" name="message" rows="4" placeholder="Pesan Anda..." required></textarea>
           </div>
-          <button type="submit" class="btn">Kirim Pesan</button>
+          <button type="submit" class="btn-outline">Kirim Pesan</button>
+          <div id="form-response"></div>
         </form>
-        <div id="form-response"></div>
       </div>
     </section>
 
     <footer>
       <div class="container">
-        <p>&copy; 2024 Portofolio Aji. Dibuat untuk tugas akhir.</p>
+        <div class="footer-content">
+          <span class="copyright">&copy; 2026 Aji Portfolio.</span>
+          <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
       </div>
     </footer>
 
